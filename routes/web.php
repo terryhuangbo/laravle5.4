@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('hb/info', 'HbController@info');
+//Route::any('hb/info', ['uses' => 'HbController@info']);
+Route::any('hb/info-{id?}', ['uses' => 'HbController@info']);
