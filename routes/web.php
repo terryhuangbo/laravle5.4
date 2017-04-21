@@ -18,3 +18,4 @@ Route::get('/', function () {
 //Route::get('hb/info', 'HbController@info');
 //Route::any('hb/info', ['uses' => 'HbController@info']);
 Route::any('hb/info-{id?}', ['uses' => 'HbController@info']);
+Route::any('hb/json', ['uses' => 'HbController@json']);
