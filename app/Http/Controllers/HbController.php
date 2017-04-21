@@ -17,4 +17,12 @@ class HbController extends Controller
             'name1', 'value', 600
         );
     }
+
+    public function json(Request $request)
+    {
+        return json_encode([
+            'code' => 200,
+            'msg' => 'success',
+        ]);
+    }
 }
