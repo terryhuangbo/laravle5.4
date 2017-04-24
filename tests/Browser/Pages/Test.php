@@ -5,7 +5,7 @@ namespace Tests\Browser\Pages;
 use Laravel\Dusk\Browser;
 use Laravel\Dusk\Page as BasePage;
 
-class Login extends BasePage
+class Test extends BasePage
 {
     /**
      * Get the URL for the page.
@@ -14,7 +14,7 @@ class Login extends BasePage
      */
     public function url()
     {
-        return '/login';
+        return '/test';
     }
 
     /**
@@ -25,7 +25,7 @@ class Login extends BasePage
      */
     public function assert(Browser $browser)
     {
-        $browser->assertPathIs($this->url());
+//        $browser->assertPathIs($this->url());
     }
 
     /**
@@ -36,7 +36,21 @@ class Login extends BasePage
     public function elements()
     {
         return [
-            '@element' => '#selector',
+            '@div' => '#div1',
         ];
+    }
+
+    /**
+     * 创建一个新的播放列表。
+     *
+     * @param  \Laravel\Dusk\Browser  $browser
+     * @param  string  $name
+     * @return void
+     */
+    public function createPlaylist(Browser $browser, $name)
+    {
+        $browser
+            ->check('vehicle')
+            ;
     }
 }
