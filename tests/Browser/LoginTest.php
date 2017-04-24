@@ -2,34 +2,22 @@
 
 namespace Tests\Browser;
 
-use App\User;
 use Tests\DuskTestCase;
-use Laravel\Dusk\Chrome;
+use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Tests\Browser\Pages\Login;
 
 class LoginTest extends DuskTestCase
 {
-//    use DatabaseMigrations;
-
     /**
-     * A basic browser test example.
-     * @group hb
+     * A Dusk test example.
+     *
      * @return void
      */
-    public function testBasicExample()
+    public function testExample()
     {
-
-//        $user = factory(User::class)->create([
-//            'email' => 'taylor@laravel.com',
-//        ]);
-//
-//        $this->browse(function ($browser) use ($user) {
-//            $browser->visit('/login')
-//                ->type('email', $user->email)
-//                ->type('password', 'secret')
-//                ->press('Login')
-//                ->assertPathIs('/home');
-//        });
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/')
+                    ->assertSee('Laravel');
+        });
     }
 }
